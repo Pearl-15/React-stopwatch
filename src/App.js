@@ -1,6 +1,8 @@
 import './App.css';
 import Stopwatch from './components/Stopwatch';
 import React from 'react';
+import Form from './components/Form';
+
 
 
 class App extends React.Component{
@@ -26,6 +28,10 @@ class App extends React.Component{
 
       <hr />
       {this.state.showStopWatch ? <Stopwatch /> : null}
+
+      <hr />
+
+      <Form />
 
       </div>
     )

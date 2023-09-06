@@ -13,6 +13,17 @@ class App extends React.Component{
     }
   }
 
+  getErrorMessage = (value)=>{
+        
+    if(value.length < 3){
+        return `value must be at least 3 characters, but is only ${value}`
+    }
+    if(!value.includes('s')){
+        return `value does not include "s" but it should!`
+    }
+    return null
+}
+
   render(){
     return(
       <div>
@@ -31,7 +42,7 @@ class App extends React.Component{
 
       <hr />
 
-      <Form />
+      <Form getErrorMessage={this.getErrorMessage}/>
 
       </div>
     )
